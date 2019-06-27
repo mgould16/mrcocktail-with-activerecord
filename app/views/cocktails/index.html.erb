@@ -1,0 +1,39 @@
+<% @cocktails.each do |cocktail| %>
+  <h2><%= cocktail.name %></h2>
+  <p><%= cocktail %></p>
+<% end %>
+
+<%= cl_image_tag("munch_4", :sign_url => true, width: 400, height: 300, crop: :fill, type:"authenticated") %>
+
+
+<%= cl_image_tag("mark", width: 400, height: 300, crop: :fill) %>
+<p>Hello</p>
+
+
+<%= cl_upload_tag(:video_id, options = {}) %>
+
+<%= cl_video_tag('mutli5oydian8kuwlixs', options = {}) %>
+
+
+<link href="https://unpkg.com/cloudinary-video-player/dist/cld-video-player.min.css" rel="stylesheet">
+<script src="https://unpkg.com/cloudinary-core/cloudinary-core-shrinkwrap.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="https://unpkg.com/cloudinary-video-player/dist/cld-video-player.min.js"></script>
+
+<video id="doc-player"  controls  muted  class="cld-video-player cld-fluid"></video>
+
+
+<script>
+  var cld = cloudinary.Cloudinary.new({ cloud_name: 'markg16' });
+  var demoplayer = cld.videoPlayer('doc-player', {
+    fontFace: 'Yatra One',
+    playlistWidget: {
+      direction: 'vertical',
+      total:5
+      }}).width(600);
+
+  demoplayer.source('https://res.cloudinary.com/markg16/video/upload/v1561542595/Video/mutli5oydian8kuwlixs.mp4').play();
+
+  // demoplayer.playlistByTag('video_race', {
+  //   sourceParams: { overlay: "cloudinary_icon", opacity: 80, effect:  "brightness:200", width: 100, gravity: "north_east", x: 20, y: 10 },  autoAdvance: 0, repeat: true, presentUpcoming: 5 })
+
+</script>

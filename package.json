@@ -1,0 +1,9 @@
+{
+  "name": "mrcocktail-with-activerecord",
+  "private": true,
+  "dependencies": {
+    "cloudinary-core": "^2.6.3",
+    "cloudinary-video-player": "^1.2.1",
+    "lodash": "^4.17.11"
+  }
+}
